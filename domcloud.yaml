@@ -1,0 +1,12 @@
+# domcloud.yaml
+source: .
+features:
+  - golang
+  - https
+commands:
+  - go build -o app main.go
+nginx:
+  fastcgi: off
+  locations:
+    - path: /
+      proxy_pass: http://127.0.0.1:3000
