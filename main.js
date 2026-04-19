@@ -14,7 +14,7 @@ window.handleCredentialResponse = (response) => {
 
 window.onload = function () {
     google.accounts.id.initialize({
-        client_id: "belum_ada.apps.googleusercontent.com",
+        client_id: "875902107302-7k4aljcte5iior4f1t1euqpltisq8ni5.apps.googleusercontent.com",
         callback: window.handleCredentialResponse
     });
 
