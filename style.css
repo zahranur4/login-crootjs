@@ -1,0 +1,30 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 350px;
+}
+
+h1 { color: #333; margin-bottom: 10px; }
+p { color: #666; margin-bottom: 25px; font-size: 14px; }
+
+#hasil {
+    margin-top: 20px;
+    padding: 10px;
+    background: #e9ecef;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #495057;
+}
