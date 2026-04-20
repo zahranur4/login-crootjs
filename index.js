@@ -4,20 +4,22 @@ window.handleCredentialResponse = (response) => {
     console.log("Token diterima dari Google");
 
     const target_url = "https://login-crootjs-go.vercel.app/api";
-    
     const data_dikirim = {
         token: response.credential
     };
 
-    // Panggil API Backend Vercel
+    const loginForm = document.getElementById('login-form');
+    const successState = document.getElementById('success-state');
+    const backendMsg = document.getElementById('backend-message');
+
     PostApi(target_url, data_dikirim, (result) => {
-        console.log("Berhasil dapat respon:", result);
+        console.log("Berhasil dapat respon backend:", result);
         
-        // Pastikan result.message ada, kalau tidak munculkan result-nya saja
-        if (result && result.message) {
-            alert("Respon dari Backend: " + result.message);
-        } else {
-            alert("Berhasil terhubung ke Backend!");
+        if (loginForm) loginForm.style.display = 'none';
+        if (successState) successState.style.display = 'flex';
+        
+        if (backendMsg) {
+            backendMsg.innerText = result?.message || "Berhasil masuk ke sistem!";
         }
     });
 };
