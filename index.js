@@ -1,6 +1,5 @@
-import { PostApi } from "https://jscroot.github.io/api/croot.js";
+import { PostApi } from "https://cdn.jsdelivr.net/gh/jscroot/api@0.0.1/croot.js";
 
-// Kita tempelkan fungsi ke window supaya Google bisa manggil fungsinya
 window.handleCredentialResponse = (response) => {
     console.log("Token diterima dari Google");
 
